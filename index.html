@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agar AZERTY Arena</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="ui-layer">
+      <header class="hud-panel top-left">
+        <h1>Agar AZERTY Arena</h1>
+        <p>Déplace-toi avec <strong>ZQSD</strong> (AZERTY). Maintiens <strong>Shift</strong> pour un boost court.</p>
+        <div class="stats-grid">
+          <div>
+            <span>Niveau</span>
+            <strong id="level">1</strong>
+          </div>
+          <div>
+            <span>XP</span>
+            <strong id="xp">0 / 60</strong>
+          </div>
+          <div>
+            <span>Masse</span>
+            <strong id="mass">16</strong>
+          </div>
+          <div>
+            <span>Position</span>
+            <strong id="rank">#1</strong>
+          </div>
+        </div>
+        <div class="xp-bar">
+          <div id="xp-fill"></div>
+        </div>
+      </header>
+
+      <aside class="hud-panel top-right">
+        <h2>Classement dynamique</h2>
+        <ol id="leaderboard"></ol>
+      </aside>
+
+      <footer class="hud-panel bottom-left">
+        <h2>Évènements</h2>
+        <ul id="event-log"></ul>
+      </footer>
+    </div>
+
+    <canvas id="game-canvas" aria-label="Zone de jeu"></canvas>
+
+    <div id="overlay" class="visible">
+      <div class="overlay-card">
+        <h2>Agar AZERTY Arena</h2>
+        <p>
+          Survis, mange les orbes et absorbe les bots. Monte en niveau, grimpe dans le top 10 et
+          active ton boost intelligemment.
+        </p>
+        <p><strong>Contrôles :</strong> ZQSD pour bouger, Shift pour booster.</p>
+        <button id="start-btn">Lancer la partie</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
